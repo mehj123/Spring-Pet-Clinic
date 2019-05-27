@@ -1,11 +1,11 @@
 package com.learningspring5.springpetclinic.services.map;
 
 import com.learningspring5.springpetclinic.model.Vet;
-import com.learningspring5.springpetclinic.services.CrudService;
+import com.learningspring5.springpetclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService{
     @Override
     public Vet findById(Long id) {
         return super.findById(id);
