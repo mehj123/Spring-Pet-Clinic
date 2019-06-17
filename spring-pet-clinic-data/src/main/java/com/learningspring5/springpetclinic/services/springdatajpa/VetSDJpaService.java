@@ -1,4 +1,4 @@
-package com.learningspring5.springpetclinic.services.map.springdatajpa;
+package com.learningspring5.springpetclinic.services.springdatajpa;
 
 import com.learningspring5.springpetclinic.model.Vet;
 import com.learningspring5.springpetclinic.repositories.VetRepository;
