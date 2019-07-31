@@ -126,4 +126,15 @@ class OwnerControllerTest {
 
         verify(ownerService).save(any());
     }
+
+    @Test
+    void processEmptyLastNameForm() throws Exception{
+        when(ownerService.findByLastNameContainingIgnoreCase(anyString())).thenReturn(Arrays.asList(Owner.builder().id(1L).build(),
+                Owner.builder().id(2L).build()));
+
+        mockMvc.perform(get("/owners").param("lastName", ""))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owners/ownersList"))
+                .andExpect(model().attribute("selections", hasSize(2)));
+    }
 }
